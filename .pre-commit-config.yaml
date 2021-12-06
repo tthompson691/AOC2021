@@ -1,0 +1,11 @@
+default_language_version:
+    python: python3.7
+repos:
+-   repo: https://github.com/psf/black
+    rev: 19.3b0
+    hooks:
+    - id: black
+-   repo: http://tfs/EBS/Big%20Data%20Services/_git/bds-pre-commit-hooks
+    rev: v1.1.0
+    hooks:
+    -   id: add_ep_confidential_notice
