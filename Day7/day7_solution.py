@@ -1,4 +1,3 @@
-# Enterprise Products Confidential
 from utils import read_input
 
 

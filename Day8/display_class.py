@@ -1,4 +1,3 @@
-# Enterprise Products Confidential
 UNIVERSAL_NUMS = {
     "vz": 1,
     "tvwxy": 2,

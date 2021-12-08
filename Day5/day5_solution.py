@@ -1,4 +1,3 @@
-# Enterprise Products Confidential
 import pandas as pd
 from utils import read_input
 

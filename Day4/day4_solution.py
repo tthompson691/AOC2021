@@ -1,4 +1,3 @@
-# Enterprise Products Confidential
 import pandas as pd
 from board_class import BingoBoard
 
