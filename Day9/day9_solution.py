@@ -59,8 +59,6 @@ class Basin:
 
                 point.has_expanded = True
 
-        # print("debug")
-
 
 class BasinPoint:
     def __init__(self, i, j):
@@ -108,7 +106,6 @@ if __name__ == "__main__":
 
     for basin in all_basins:
         basin.do_all_the_expanding()
-        print(len(basin.points))
 
     all_basin_sizes = [len(basin.points) for basin in all_basins]
     all_basin_sizes.sort()
