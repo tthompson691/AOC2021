@@ -7,8 +7,7 @@ def calculate_autocomplete_score(chars):
     final_score = 0
 
     for _char in chars:
-        final_score = final_score * 5
-        final_score += auto_score_dict[_char]
+        final_score = final_score * 5 + auto_score_dict[_char]
 
     return final_score
 
@@ -20,21 +19,21 @@ if __name__ == "__main__":
     line_scores = 0
     all_auto_scores = []
     for line in subsystem:
-        line_openers = []
+        stack = []
         line_corrupted = False
         for char in line:
             if char in pairs_dict.keys():
-                line_openers.append(char)
+                stack.append(char)
             elif char in pairs_dict.values():
-                if char != pairs_dict[line_openers[-1]]:
+                if char != pairs_dict[stack[-1]]:
                     line_scores += scores[char]
                     line_corrupted = True
                     break
                 else:
-                    del line_openers[-1]
+                    del stack[-1]
 
         if not line_corrupted:
-            completion_chars = [pairs_dict[i] for i in reversed(line_openers)]
+            completion_chars = [pairs_dict[i] for i in reversed(stack)]
             all_auto_scores.append(calculate_autocomplete_score(completion_chars))
 
     print(f"total corrupted: {line_scores}")
