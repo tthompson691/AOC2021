@@ -43,7 +43,7 @@ def insert_the_things2(bits_dict, _insertions, _char_counts, i=0):
 
 if __name__ == "__main__":
     inp = read_input("day14_input.txt")
-    start_str = final_str = inp[0]
+    start_str = inp[0]
     insertions = {i.split(" -> ")[0]: i.split(" -> ")[1] for i in inp[2:]}
 
     final_str = insert_the_things(running_str=start_str, _insertions=insertions)
