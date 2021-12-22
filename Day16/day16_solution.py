@@ -98,8 +98,8 @@ def parse_packet(packet, versions=0):
 
 
 if __name__ == "__main__":
-    inp = read_input("day16_sample_input.txt")
-    a = 9
+    inp = read_input("day16_input.txt")
+    a = 0
     hex = inp[a]
     packet = bin(int(hex, 16))[2:]
     if hex[0] == "0":
